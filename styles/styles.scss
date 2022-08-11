@@ -1,4 +1,6 @@
 @import "config";
+@import "header";
+@import "independent";
 
 body {
     background-color: $color-primary;
@@ -43,25 +45,25 @@ section {
 .sec-2 {
     display: none;
     transform: translateY(0) scale(1);
-    background-color: slateblue;
+
 }
 
 .sec-3 {
     display: none;
     transform: translateY(0) scale(1);
-    background-color: maroon;
+
 }
 
 .sec-4 {
     display: none;
     transform: translateY(0) scale(1);
-    background-color: green;
+
 }
 
 .sec-5 {
     display: none;
     transform: translateY(0) scale(1);
-    background-color: aquamarine;
+
 }
 
 .active {
@@ -69,11 +71,11 @@ section {
     animation: scaleAnim 1s ease-in-out;
     @keyframes scaleAnim {
         0%{
-            transform: translateY(-100) scaleY(0);
+            transform: translateY(-100) scaleY(0)
         }
 
         100%{
-            transform: translateY(0) scaleY(1);
+            transform: translateY(0) scaleY(1)
         }
     }
 
@@ -116,4 +118,6 @@ section {
             }
         }
 }
+
+
 
