@@ -1,6 +1,7 @@
 @import "config";
 @import "header";
 @import "independent";
+@import "about";
 
 body {
     background-color: $color-primary;
@@ -21,6 +22,7 @@ header {
     height: 100vh;
     color: $color-white;
     overflow: hidden;
+    padding: 0 !important;
 }
 section {
     min-height: 100vh;
@@ -28,10 +30,11 @@ section {
     position: absolute;
     left: 0;
     top: 0;
-    padding: 3 rem 18 rem;
+    padding: 3rem 18rem;
 }
 
-.section {
+.container {
+    display: none;
     transform: translate(-100%) scale(0);
     transition: all 0.4s ease-in-out;
     background-color: $color-primary;
@@ -68,14 +71,15 @@ section {
 
 .active {
     display: block;
-    animation: scaleAnim 1s ease-in-out;
-    @keyframes scaleAnim {
+    animation: appear 1s ease-in-out;
+    transform: translateY(0) scaleY(1);
+    @keyframes appear {
         0%{
-            transform: translateY(-100) scaleY(0)
+            transform: translateY(-100%) scaleY(0);
         }
 
         100%{
-            transform: translateY(0) scaleY(1)
+            transform: translateY(0) scaleY(1);
         }
     }
 
